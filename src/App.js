@@ -1,14 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './MyComponent/Header';
 
 function App() {
   return (
-
-    <div>
-      <h1>My Apps Works</h1>
-      <h1>My Apps Works</h1>
-      <h1>My Apps Works</h1>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 

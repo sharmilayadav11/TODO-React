@@ -6,6 +6,10 @@ import { Todos } from './MyComponent/Todos';
 import { Footer } from './MyComponent/Footer';
 
 function App() {
+  const onDelete = () => {
+    console.log("I am ondelete of todo", "todo");
+  }
+
   let todos = [
     {
       sno: 1,

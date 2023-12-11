@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './MyComponent/Header';
-import { TodoItem } from './MyComponent/TodoItem';
 import { Todos } from './MyComponent/Todos';
 import { Footer } from './MyComponent/Footer';
 import React, { useState } from 'react';
@@ -44,7 +42,6 @@ function App() {
       desc: "You need to go to the Gym and do some exercise3"
     }
   ]);
-
   return (
     <>
       <Header title="My Todo List" searchBar={true} />

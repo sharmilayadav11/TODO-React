@@ -3,22 +3,17 @@ import React from 'react'
 export const AddTodo = () => {
     return (
         <div className='container'>
-            <h4>AddTodo</h4>
+            <h3>AddTodo</h3>
             <form>
                 <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <label for="title" className="form-label">Todo Title</label>
+                    <input type="text" className="form-control" id="title" />
                 </div>
                 <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" />
+                    <label for="desc" className="form-label">Todo Description</label>
+                    <input type="password" className="form-control" id="desc" />
                 </div>
-                <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-sm btn-success">Add Todo</button>
             </form>
 
         </div>

@@ -74,3 +74,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+#Hooks UseState & UseEffect Learning
+
+import { useState, useEffect } from 'react';
+
+import './style.css';
+
+export const App = () => {
+  const [count, setCount] = useState(0); //useState(0)means its an initial value, it will start at 0
+  
+  const [count1, setCount1] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  }, [count]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount1((count1) => count1 + 1);
+    }, 1000);
+  },[count1]);
+  
+
+  return (
+    <>
+      <h1>I have rendered Count {count} times!</h1>
+      <h1>I have rendered CountOne {count1} times!</h1>
+    </>
+  );
+};

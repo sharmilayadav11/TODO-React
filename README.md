@@ -3,6 +3,43 @@ Here is my deployed protfolio project link:
 
 [DEMO](https://elaborate-fairy-ed40aa.netlify.app/)
 
+## Overview
+
+This documentation provides a comprehensive guide to understanding and using the React Todo App. The app is designed to help users manage their tasks by providing a simple and intuitive interface for adding and deleting todo items.
+
+### Components
+
+#### 1. App Component
+
+The `App` component is the main component of the React Todo App. It consists of the following components:
+
+- `Header`: Displays the header of the application.
+- `AddTodo`: Provides functionality to add new todo items.
+- `Todos`: Displays the list of todo items.
+- `Footer`: Displays the footer of the application.
+
+#### 2. AddTodo Component
+
+The `AddTodo` component allows users to add new todo items to the list. It has the following functionality:
+
+- **Input Field:** Users can enter the content of the new todo item.
+- **Add Button:** Adds the new todo item to the list when clicked.
+
+#### 3. Header Component
+
+The `Header` component displays the header of the React Todo App. It may include the app name or any other relevant information.
+
+#### 4. Todos Component
+
+The `Todos` component is responsible for rendering the list of todo items. Each todo item is represented by a `TodoItem` component.
+
+#### 5. TodoItem Component
+
+The `TodoItem` component represents an individual todo item. It displays the todo item's content and includes a delete button to remove the item from the list.
+
+#### 6. Footer Component
+
+The `Footer` component displays the footer of the React Todo App. It may include additional information, links, or credits.
 
 # Getting Started with Create React App
 
@@ -74,35 +111,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-#Hooks UseState & UseEffect Learning
-
-import { useState, useEffect } from 'react';
-
-import './style.css';
-
-export const App = () => {
-  const [count, setCount] = useState(0); //useState(0)means its an initial value, it will start at 0
-  
-  const [count1, setCount1] = useState(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-  }, [count]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount1((count1) => count1 + 1);
-    }, 1000);
-  },[count1]);
-  
-
-  return (
-    <>
-      <h1>I have rendered Count {count} times!</h1>
-      <h1>I have rendered CountOne {count1} times!</h1>
-    </>
-  );
-};

@@ -45,9 +45,10 @@ function App() {
   ]);
 
   const addTodo = (todo) => {
+    //Create new list with old Todos and new Todo
     setTodos([
       {
-        ...todo,
+        ...todo,// with 3 dots it will create copy of each property and elements
         sno: todos.length + 1
       },
       ...todos,

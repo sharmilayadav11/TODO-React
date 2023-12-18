@@ -5,9 +5,9 @@ export const AddTodo = ({ addTodo }) => {
         <div className='container'>
             <h3>AddTodo</h3>
             <form onSubmit={(event) => {
-                event.preventDefault();
-                const title = event.target.title.value;
-                const desc = event.target.desc.value;
+                event.preventDefault();//used to prevent unwanted click
+                const title = event.target.title.value;//access title value
+                const desc = event.target.desc.value;//access desc value
                 addTodo({ desc, title });
             }}>
                 <div className="mb-3">

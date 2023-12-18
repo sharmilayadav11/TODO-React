@@ -43,10 +43,21 @@ function App() {
       desc: "You need to go to the Gym and do some exercise3"
     }
   ]);
+
+  const addTodo = (todo) => {
+    setTodos([
+      {
+        ...todo,
+        sno: todos.length + 1
+      },
+      ...todos,
+    ])
+  };
+
   return (
     <>
       <Header title="My Todo List" searchBar={true} />
-      <AddTodo />
+      <AddTodo addTodo={addTodo} />
       <Todos todos={todos} onDelete={onDelete} />
 
       <Footer />
